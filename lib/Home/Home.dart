@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
         color: Color.fromARGB(255, 18, 40, 240)
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Image.asset(
             "assets/openPay.png",
@@ -25,6 +25,14 @@ class Home extends StatelessWidget {
               color: Colors.black,
               decoration: TextDecoration.none,
             ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "menu");
+            },
+            child: Text(
+              "Continuar"
+            )
           )
         ],
       ),
